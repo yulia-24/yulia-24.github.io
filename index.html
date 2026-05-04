@@ -2,19 +2,134 @@
 <html>
 <head>
   <title>Yulia Portfolio</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    nav {
+      background: #222;
+      padding: 18px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: bold;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .projects {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin: 20px 15px 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #666;
+      padding: 0 20px 20px;
+      line-height: 1.5;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding: 10px 18px;
+      background: #2E9EF7;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 800px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hi, I'm Yulia 👋</h1>
-  <p>Welcome to my data analyst portfolio website.</p>
 
-  <h2>Featured Projects</h2>
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="mailto:jbatakci@gmail.com">Contact</a>
+    <a href="https://github.com/yulia-24" target="_blank">GitHub</a>
+  </nav>
 
-  <h3>Housing Price Analysis</h3>
-  <p>
-    A data analysis and machine learning project exploring housing price growth using economic and demographic variables.
-  </p>
-  <a href="https://github.com/yulia-24/housing-price-analysis" target="_blank">
-    View Project
-  </a>
+  <header id="intro">
+    <h1>Hi, I'm Yulia 👋</h1>
+    <p>Data Analyst | Python | SQL | Statistics | Machine Learning</p>
+  </header>
+
+  <section id="portfolio">
+    <h2 style="text-align:center;">Featured Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <img src="images/housing.png" alt="Housing Project">
+        <h3>Housing Price Analysis</h3>
+        <p>Analyzed housing price growth using economic and demographic variables with Python and machine learning.</p>
+        <a href="https://github.com/yulia-24/housing-price-analysis" target="_blank">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="images/customer.png" alt="Customer Analysis">
+        <h3>Customer Behavior Analysis</h3>
+        <p>Explored customer patterns, segments, and business insights using data cleaning and visualization.</p>
+        <a href="https://github.com/yulia-24/customer-behavior-analysis" target="_blank">View Project</a>
+      </div>
+
+      <div class="card">
+        <img src="images/abtesting.png" alt="A/B Testing Project">
+        <h3>A/B Testing Analysis</h3>
+        <p>Used statistical testing to evaluate whether a business change improved conversion rates.</p>
+        <a href="https://github.com/yulia-24/ab-testing-analysis" target="_blank">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
 </body>
 </html>
